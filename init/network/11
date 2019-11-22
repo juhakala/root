@@ -1,0 +1,4 @@
+name: nat
+ip: 10.60.1.1
+
+#nat = network address translation

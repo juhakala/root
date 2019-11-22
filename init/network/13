@@ -1,0 +1,4 @@
+c1r4p5.hive.fi.
+
+# iconfig en0 | grep "inet " | awk '{print $2}'
+# nslookup 10.11.4.5 |grep name | awk '{print $4}'
