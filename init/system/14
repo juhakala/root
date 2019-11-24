@@ -1,0 +1,4 @@
+tail -f /var/log/syslog &
+
+# & for background 
+# bg to see jobs in bg

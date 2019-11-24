@@ -1,0 +1,5 @@
+ssh username@ip_address
+
+# ssh kala@10.11.200.153
+# get ip from deb hostname -I
+# input userpasword

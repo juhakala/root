@@ -1,0 +1,3 @@
+cat /var/run/sshd.pid
+
+# or sudo systemctl status ssh | grep PID

@@ -1,0 +1,3 @@
+du -b /var/*
+
+# -h for human-readable option

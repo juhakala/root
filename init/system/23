@@ -1,0 +1,4 @@
+in graphic session: start the VM and log in as new user by giving new_username and password
+#if VM already running then log off from current user and log in as the new user
+
+in ssh: ssh new_username@ipaddress
