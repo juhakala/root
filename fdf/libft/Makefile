@@ -6,7 +6,7 @@
 #    By: jhakala <jhakala@student.hive.fi>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/16 11:07:07 by jhakala           #+#    #+#              #
-#    Updated: 2019/11/26 19:08:32 by jhakala          ###   ########.fr        #
+#    Updated: 2019/12/04 20:21:55 by jhakala          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ clean:
 	@echo clean done.
 
 fclean: clean
-	/bin/rm -f $(NAME)
+	@/bin/rm -f $(NAME)
 	@echo fclean done.
 
 re: fclean all

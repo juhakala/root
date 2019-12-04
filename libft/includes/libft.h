@@ -6,7 +6,7 @@
 /*   By: jhakala <jhakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 11:18:42 by jhakala           #+#    #+#             */
-/*   Updated: 2019/10/30 19:13:01 by jhakala          ###   ########.fr       */
+/*   Updated: 2019/11/26 19:09:29 by jhakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,7 @@ void				ft_swap_address(int *a, int *b);
 int					ft_countdigit(int n);
 void				ft_lst_content(t_list *lst);
 void				ft_lstprint(t_list *lst);
+int					ft_wordlen(const char *str, char c);
+int					ft_atoi_base(const char *str, int str_base);
 
 #endif
