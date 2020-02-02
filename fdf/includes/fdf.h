@@ -6,7 +6,7 @@
 /*   By: jhakala <jhakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/25 18:29:34 by jhakala           #+#    #+#             */
-/*   Updated: 2019/12/04 19:30:43 by jhakala          ###   ########.fr       */
+/*   Updated: 2020/02/02 22:10:19 by jhakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ typedef struct		s_event
 	int				color_scheme;
 	int				bg_color;
 	int				instructions;
+	char			*name;
 }					t_event;
 typedef struct		s_xyz
 {

@@ -6,7 +6,7 @@
 /*   By: jhakala <jhakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 10:56:25 by jhakala           #+#    #+#             */
-/*   Updated: 2019/12/04 20:38:39 by jhakala          ###   ########.fr       */
+/*   Updated: 2020/02/02 22:11:28 by jhakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ t_event	*ft_initevent(t_map *map, char *name)
 
 	if (!(ev = (t_event *)ft_memalloc(sizeof(t_event))))
 		ft_error("");
+	ev->name = ft_strjoin("FdF: ", name);
 	ev->mlx = mlx_init();
-	ev->win = mlx_new_window(ev->mlx, WIN_W, WIN_H,
-					ft_strjoin("FdF: ", name));
+	ev->win = mlx_new_window(ev->mlx, WIN_W, WIN_H, ev->name);
 	ev->img = mlx_new_image(ev->mlx, WIN_W, WIN_H);
 	ev->data_address = mlx_get_data_addr(ev->img, &(ev->pits_in_pixel),
 			&(ev->size_line), &(ev->endian));
