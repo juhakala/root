@@ -6,7 +6,7 @@
 #    By: jhakala <jhakala@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/10 19:48:51 by jhakala           #+#    #+#              #
-#    Updated: 2020/02/02 23:47:37 by jhakala          ###   ########.fr        #
+#    Updated: 2020/02/03 14:12:06 by jhakala          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,6 @@ HEAD = -I libft/includes -I includes
 LIBFT = libft/libft.a
 
 BONUS = -lmlx -framework OpenGL -framework AppKit
-
 
 all: $(NAME) $(PUSH_SWAP)
 

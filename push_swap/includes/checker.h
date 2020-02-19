@@ -6,7 +6,7 @@
 /*   By: jhakala <jhakala@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/10 20:43:36 by jhakala           #+#    #+#             */
-/*   Updated: 2020/02/02 23:26:30 by jhakala          ###   ########.fr       */
+/*   Updated: 2020/02/02 23:53:15 by jhakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,6 @@ int				cmd_rrr(t_mem *mem);
 void			ft_error(char *str);
 int				ft_order(t_mem *mem);
 int				ft_str_size(char **str);
-int				ft_get_high(t_mem *mem);
 t_mem			*ft_stack_init(t_mem *mem, int ac);
 
 #endif

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   atoi_mod.c                                         :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhakala <jhakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/10 21:30:07 by jhakala           #+#    #+#             */
-/*   Updated: 2020/02/06 23:41:52 by jhakala          ###   ########.fr       */
+/*   Created: 2019/10/29 11:12:58 by jhakala           #+#    #+#             */
+/*   Updated: 2019/10/30 18:40:57 by jhakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "libft.h"
 
-long long int	ft_atoi_mod(const char *str)
+int	ft_atoi(const char *str)
 {
 	size_t	res;
 	int		minus;
@@ -30,17 +30,7 @@ long long int	ft_atoi_mod(const char *str)
 		res = res * 10 + (*str - 48);
 		str++;
 	}
-	if ((*str > 57 || *str < 48) && *str != '\0' && *str != ' ')
-		ft_error("Error\n");
 	if (res > 9223372036854775807)
-		ft_error("Error\n");
+		return (minus == -1) ? 0 : -1;
 	return (res * minus);
-}
-
-void			ft_end_order(t_mem *mem)
-{
-	if (ft_order(mem))
-		ft_putstr("OK\n");
-	else
-		ft_putstr("KO\n");
 }

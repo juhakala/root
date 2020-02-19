@@ -1,41 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhakala <jhakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/15 22:13:53 by jhakala           #+#    #+#             */
-/*   Updated: 2020/02/06 23:40:18 by jhakala          ###   ########.fr       */
+/*   Created: 2019/10/29 10:26:35 by jhakala           #+#    #+#             */
+/*   Updated: 2019/10/29 11:31:29 by jhakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push.h"
+#include "libft.h"
 
-void	ft_error(char *str)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	ft_putstr_fd(str, 2);
-	exit(1);
-}
+	size_t			i;
+	unsigned char	*des;
+	unsigned char	*sr;
 
-int		ft_order(t_mem *mem)
-{
-	int i;
-
+	des = (unsigned char *)dest;
+	sr = (unsigned char *)src;
+	if (src == dest || !n)
+		return (dest);
 	i = 0;
-	while (mem->a[i] == mem->real[i] && mem->b_size == 0 && i < mem->size)
+	while (i < n)
+	{
+		des[i] = sr[i];
 		i++;
-	if (!mem->b_size && i == mem->size)
-		return (1);
-	return (0);
-}
-
-int		ft_str_size(char **str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i + 1);
+	}
+	return (dest);
 }

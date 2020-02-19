@@ -1,41 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   type_c.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhakala <jhakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/15 22:13:53 by jhakala           #+#    #+#             */
-/*   Updated: 2020/02/06 23:40:18 by jhakala          ###   ########.fr       */
+/*   Created: 2019/12/12 00:19:46 by jhakala           #+#    #+#             */
+/*   Updated: 2019/12/19 15:56:45 by jhakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push.h"
+#include "ft_printf.h"
 
-void	ft_error(char *str)
+int		type_c(va_list ap, t_flags *flags)
 {
-	ft_putstr_fd(str, 2);
-	exit(1);
-}
+	int c;
+	int width;
 
-int		ft_order(t_mem *mem)
-{
-	int i;
-
-	i = 0;
-	while (mem->a[i] == mem->real[i] && mem->b_size == 0 && i < mem->size)
-		i++;
-	if (!mem->b_size && i == mem->size)
-		return (1);
-	return (0);
-}
-
-int		ft_str_size(char **str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i + 1);
+	c = va_arg(ap, int);
+	width = 0;
+	if (flags->width)
+	{
+		if (flags->minus)
+			ft_write(&c, 1, flags);
+		while (width++ < flags->width - 1)
+			ft_write((flags->zero && !flags->minus) ? "0" : " ", 1, flags);
+	}
+	if (!flags->width || !flags->minus)
+		ft_write(&c, 1, flags);
+	return ((flags->width) ? width : 1);
 }

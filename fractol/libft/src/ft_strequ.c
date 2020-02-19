@@ -1,41 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhakala <jhakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/15 22:13:53 by jhakala           #+#    #+#             */
-/*   Updated: 2020/02/06 23:40:18 by jhakala          ###   ########.fr       */
+/*   Created: 2019/10/20 13:48:08 by jhakala           #+#    #+#             */
+/*   Updated: 2019/10/30 18:50:50 by jhakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push.h"
-
-void	ft_error(char *str)
-{
-	ft_putstr_fd(str, 2);
-	exit(1);
-}
-
-int		ft_order(t_mem *mem)
+int	ft_strequ(char const *s1, char const *s2)
 {
 	int i;
 
 	i = 0;
-	while (mem->a[i] == mem->real[i] && mem->b_size == 0 && i < mem->size)
+	if (s1 == 0 || s2 == 0)
+		return (0);
+	while (s1[i] == s2[i] && s1[i] && s2[i])
 		i++;
-	if (!mem->b_size && i == mem->size)
+	if (!s1[i] && !s2[i])
 		return (1);
 	return (0);
-}
-
-int		ft_str_size(char **str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i + 1);
 }

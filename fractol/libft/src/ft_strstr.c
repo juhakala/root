@@ -1,41 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhakala <jhakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/15 22:13:53 by jhakala           #+#    #+#             */
-/*   Updated: 2020/02/06 23:40:18 by jhakala          ###   ########.fr       */
+/*   Created: 2019/10/29 11:01:27 by jhakala           #+#    #+#             */
+/*   Updated: 2019/10/29 11:04:33 by jhakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push.h"
+#include "libft.h"
 
-void	ft_error(char *str)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
-	ft_putstr_fd(str, 2);
-	exit(1);
-}
+	const char	*str;
+	const char	*find;
 
-int		ft_order(t_mem *mem)
-{
-	int i;
-
-	i = 0;
-	while (mem->a[i] == mem->real[i] && mem->b_size == 0 && i < mem->size)
-		i++;
-	if (!mem->b_size && i == mem->size)
-		return (1);
-	return (0);
-}
-
-int		ft_str_size(char **str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i + 1);
+	if (ft_strlen(needle) == 0)
+		return ((char *)haystack);
+	while (*haystack)
+	{
+		str = haystack;
+		find = needle;
+		while (*find && *str == *find)
+		{
+			find++;
+			str++;
+		}
+		if (!(*find))
+			return ((char *)haystack);
+		haystack++;
+	}
+	return (NULL);
 }

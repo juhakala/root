@@ -1,41 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhakala <jhakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/15 22:13:53 by jhakala           #+#    #+#             */
-/*   Updated: 2020/02/06 23:40:18 by jhakala          ###   ########.fr       */
+/*   Created: 2020/02/03 20:05:14 by jhakala           #+#    #+#             */
+/*   Updated: 2020/02/09 19:43:41 by jhakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push.h"
+#include "fractol.h"
 
-void	ft_error(char *str)
+t_ev	*ft_init_ev(void)
 {
-	ft_putstr_fd(str, 2);
-	exit(1);
-}
+	t_ev *ev;
 
-int		ft_order(t_mem *mem)
-{
-	int i;
-
-	i = 0;
-	while (mem->a[i] == mem->real[i] && mem->b_size == 0 && i < mem->size)
-		i++;
-	if (!mem->b_size && i == mem->size)
-		return (1);
-	return (0);
-}
-
-int		ft_str_size(char **str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i + 1);
+	if (!(ev = (t_ev *)ft_memalloc(sizeof(t_ev))))
+		exit(0);
+	ev->mlx = mlx_init();
+	ev->win = mlx_new_window(ev->mlx, WIN_W, WIN_H, "fractol");
+	ev->img = mlx_new_image(ev->mlx, WIN_W, WIN_H);
+	ev->data_addr = mlx_get_data_addr(ev->img, &(ev->bits_per_pixel),
+					&(ev->size_line), &(ev->endian));
+	ev->type = 0;
+	ev->info = 0;
+	reset(ev);
+	return (ev);
 }

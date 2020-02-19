@@ -6,7 +6,7 @@
 /*   By: jhakala <jhakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 14:17:20 by jhakala           #+#    #+#             */
-/*   Updated: 2020/02/02 21:52:01 by jhakala          ###   ########.fr       */
+/*   Updated: 2020/02/06 23:35:04 by jhakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,9 @@ void		ft_get_stack_arg(char **av, t_mem *mem)
 	{
 		n = ft_atoi_mod(av[i]);
 		if (n > 2147483647 || n < -2147483648)
-			ft_error("min_max_Error\n");
+			ft_error("Error\n");
 		if (!check_double((int)n, mem->a, i))
-			ft_error("Cdouble_check_Error\n");
+			ft_error("Error\n");
 		mem->a[i] = n;
 		i++;
 	}
@@ -54,9 +54,9 @@ void		ft_get_stack(char **av, t_mem *mem)
 	{
 		n = ft_atoi_mod(av[i + 1]);
 		if (n > 2147483647 || n < -2147483648)
-			ft_error("min_max_Error\n");
+			ft_error("Error\n");
 		if (!check_double((int)n, mem->a, i))
-			ft_error("Cdouble_check_Error\n");
+			ft_error("Error\n");
 		mem->a[i] = n;
 		i++;
 	}

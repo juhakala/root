@@ -1,41 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhakala <jhakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/15 22:13:53 by jhakala           #+#    #+#             */
-/*   Updated: 2020/02/06 23:40:18 by jhakala          ###   ########.fr       */
+/*   Created: 2019/10/21 13:09:44 by jhakala           #+#    #+#             */
+/*   Updated: 2019/10/30 19:16:58 by jhakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push.h"
+#include "libft.h"
+#include <stdlib.h>
 
-void	ft_error(char *str)
+char	*ft_itoa(int n)
 {
-	ft_putstr_fd(str, 2);
-	exit(1);
-}
+	char	*str;
+	int		n_len;
+	int		neg;
+	long	tmp;
 
-int		ft_order(t_mem *mem)
-{
-	int i;
-
-	i = 0;
-	while (mem->a[i] == mem->real[i] && mem->b_size == 0 && i < mem->size)
-		i++;
-	if (!mem->b_size && i == mem->size)
-		return (1);
-	return (0);
-}
-
-int		ft_str_size(char **str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i + 1);
+	neg = 0;
+	tmp = n;
+	if (n < 0)
+	{
+		tmp *= -1;
+		neg = 1;
+	}
+	n_len = ft_countdigit(n);
+	if (!(str = ft_strnew(n_len + neg)))
+		return (NULL);
+	str[n_len + neg] = '\0';
+	while (n_len)
+	{
+		n_len--;
+		str[n_len + neg] = (tmp % 10) + '0';
+		tmp = tmp / 10;
+	}
+	if (neg == 1)
+		str[0] = '-';
+	return (str);
 }
