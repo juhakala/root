@@ -9,3 +9,16 @@ run make
 
 **Usage**
 ./fillit [test_file]
+
+**Example:**
+```
+~ ./fillit tests/test1
+
+.AABB..
+AACCB..
+.CC.BDD
+.EE.DD.
+EEFFGG.
+.FFGGHH
+....HH.
+```
