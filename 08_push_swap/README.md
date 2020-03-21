@@ -6,6 +6,7 @@ to get numbers from 0 to 100 in random order
 **or**
 
 bash push_swap_test.sh and follow the instructions
+if you dont have norminette, pick n when asked
 
 **Visualizer**
 
