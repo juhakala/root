@@ -1,6 +1,7 @@
 # root
 
 **to do list:**  
+```
    - **libft**:
      - dont change anymore, just use ft_printf's libft.a for future projects
      - let it be memory of how lost you once were
@@ -10,7 +11,7 @@
    - **push_swap**:
      - add in readme the idea of how it is doing the sorting
      - make external visualizer so you dont have to have minilibx and take mlx out of core project
-   - **lem-in**:
+   - **lem-in**:(check working repository, this is just some core things, not working things in here)
      - add flags
        - leaks
        - show what ended the reading
@@ -21,4 +22,4 @@
        - change/overwrite number of ants
      - just move ants now and make it pretty
      - external visualizer maybe?
-  
+  ```
