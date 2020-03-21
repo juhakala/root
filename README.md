@@ -12,7 +12,7 @@
        - probably just make light ft_printf with less functions and without so many flags
    ```
    - **push_swap**:
-     ```- add in readme the idea of how it is doing the sorting
+     ``` - add in readme the idea of how it is doing the sorting
      - make external visualizer so you dont have to have minilibx and take mlx out of core project
      ```
    - **lem-in**:(check working repository, this is just some core things, not working things in here)
