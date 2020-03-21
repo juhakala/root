@@ -1,6 +1,9 @@
 # root
 
 **to do list:**  
+   - libft:
+     - dont change anymore, just use ft_printf's libft.a for future projects
+     - let it be memory of how lost you once were
    - ft_printf:
      - really should do this again from start with higher speed and little better structs and less if statements
        - probably just make light ft_printf with less functions and without so many flags
