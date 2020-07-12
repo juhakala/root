@@ -1,5 +1,14 @@
 # root
 
+   ```
+   - **just one project**
+      git submodule init
+      git submodule update
+      
+   - **all**
+      --recurse-submodules
+   ```
+
 **to do list:**  
    - **libft**:
    ```
