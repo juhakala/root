@@ -1,12 +1,14 @@
 # root
 
    ```
-   - **just one project**
-      git submodule init
-      git submodule update
+   - just one project
+      $ git submodule init directory_name
       
-   - **all**
-      --recurse-submodules
+   - all
+      $ git submodule init
+      
+   $ git submodule update
+      
    ```
 
 **to do list:**  
