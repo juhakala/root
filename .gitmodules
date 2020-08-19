@@ -4,3 +4,6 @@
 [submodule "000_tests"]
 	path = 000_tests
 	url = https://github.com/Cheatteri/000_tests.git
+[submodule "11_corewr"]
+	path = 11_corewar
+	url = https://github.com/Cheatteri/11_corewar.git
