@@ -45,7 +45,8 @@ place to store projects done in school
    - **corewar**:
    ```
      - final project in algorithmic branch (original https://github.com/jussihyva/corewar)
-     - virtual machine with fixed amount of memory to champpions fight in
+     - asm compiler to compile champpion .s to .cor file
+     - virtual machine with fixed amount of memory for champpions (.cor) to fight in agains other champpions nad survival
      - with:
        - shilena91
        - jussihyva
