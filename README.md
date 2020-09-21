@@ -46,7 +46,7 @@ place to store projects done in school
    ```
      - final project in algorithmic branch (original https://github.com/jussihyva/corewar)
      - asm compiler to compile champpion .s to .cor file
-     - virtual machine with fixed amount of memory for champpions (.cor) to fight in agains other champpions nad survival
+     - virtual machine with fixed amount of memory for champpions (.cor) to fight in agains other champpions and survival
      - with:
        - shilena91
        - jussihyva
