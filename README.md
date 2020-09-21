@@ -1,5 +1,7 @@
 # root
 
+place to store projects done in school
+
    ```
    - just one project
       $ git submodule init directory_name
