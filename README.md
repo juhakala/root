@@ -24,24 +24,26 @@
    ```
    - **push_swap**:
    ```
-     - add in readme the idea of how it is doing the sorting
-     - make external visualizer so you dont have to have minilibx and take mlx out of core project
+     - [ ] add in readme the idea of how it is doing the sorting
+     - [x] minilibx visualizer
+     - [ ] external visualizer so you dont have to have minilibx and take mlx out of core project
    ```
    - **lem-in**:
    ```
      - add flags
-       - ~~leaks~~
-       - ~~show what ended the reading~~
-       - ~~time~~
-       - ~~how many turns it took~~
-       - ~~show routes~~
-       - show all possible  routes? (maybe for smaller maps or max routes arount 100?)
-       - ~~change/overwrite number of ants~~
-     - ~~external visualizer~~ no
+       - [x] leaks
+       - [x] show what ended the reading
+       - [x] time
+       - [x] how many turns it took
+       - [x] show routes
+       - [ ] show all possible  routes? (maybe for smaller maps or max routes arount 100?)
+       - [x] change/overwrite number of ants
+     - [ ] external visualizer
    ```
    - **corewar**:
    ```
      - final project in algorithmic branch (original https://github.com/jussihyva/corewar)
+     - virtual machine with fixed amount of memory to champpions fight in
      - with:
        - shilena91
        - jussihyva
