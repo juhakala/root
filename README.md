@@ -27,16 +27,23 @@
      - add in readme the idea of how it is doing the sorting
      - make external visualizer so you dont have to have minilibx and take mlx out of core project
    ```
-   - **lem-in**:(check working repository, this is just some core things, not working things in here)
+   - **lem-in**:
    ```
      - add flags
-       - leaks
-       - show what ended the reading
-       - time
-       - how many turns it took
-       - show routes
+       - ~~leaks~~
+       - ~~show what ended the reading~~
+       - ~~time~~
+       - ~~how many turns it took~~
+       - ~~show routes~~
        - show all possible  routes? (maybe for smaller maps or max routes arount 100?)
-       - change/overwrite number of ants
-     - just move ants now and make it pretty
-     - external visualizer maybe?
+       - ~~change/overwrite number of ants~~
+     - ~~external visualizer~~ no
    ```
+   - **corewar**:
+   ```
+     - final project in algorithmic branch (original https://github.com/jussihyva/corewar)
+     - with:
+       - shilena91
+       - jussihyva
+   ```
+   
